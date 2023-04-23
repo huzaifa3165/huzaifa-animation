@@ -1,0 +1,41 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #252839;
+    min-height: 100vh;
+}
+h1{
+    position: relative;
+    font-size: 14vh;
+    color: #252839;
+    -webkit-text-stroke: 0.3vh #383d52;
+    text-transform: uppercase;
+}
+h1::before{
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    height:100%;
+    width: 50%;
+    color: #01fe87;
+    overflow: hidden;
+    border-right: 2px solid #383d52;
+    animation: animateT 3s linear infinite;
+}
+@keyframes animateT{
+    0%,10%,100%{
+        width: 0%;
+    }
+    70%,90%{
+        width: 100%;
+    }
+}
